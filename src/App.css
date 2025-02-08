@@ -1,0 +1,618 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --primary-color: #2596be;
+    --secondary-color: #F4347F;
+    --text-secondary-color: #6b7280;
+    --white-color: #FFFFFF;
+    --black-color: #000000;
+}
+
+body {
+    overflow: hidden;
+}
+
+/* Reusable CSS */
+.bg-blue {
+    background-color: var(--primary-color);
+}
+
+.bg-pink {
+    background-color: var(--secondary-color);
+}
+
+.bg-red {
+    background-color: red;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+}
+
+.btn-primary,
+.btn-danger {
+    font-size: 14px;
+    border-radius: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: block;
+    max-width: max-content;
+    color: var(--white-color);
+}
+
+.btn-primary,
+.btn-danger:hover {
+    color: var(--white-color);
+}
+
+.btn-primary:hover {
+    background-color: #167496;
+}
+
+.w-100 {
+    max-width: 100%;
+}
+
+p {
+    color: var(--text-secondary-color);
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+form .row {
+    gap: 20px 0;
+}
+
+label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 100%;
+    border: 1px solid lightgray;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+input:focus {
+    outline: none;
+}
+
+input::placeholder {
+    font-size: 14px;
+}
+
+select {
+    width: 100%;
+    border: 1px solid lightgray;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+select:focus {
+    outline: none;
+}
+
+textarea {
+    width: 100%;
+    border: 1px solid lightgray;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+
+/* Reusable CSS */
+
+main {
+    display: flex;
+    position: relative;
+}
+
+.doctorheader {
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+}
+.patientheader {
+    background-color: rgb(219, 10, 135);
+    display: flex;
+    align-items: center;
+}
+
+.main-logo {
+    width: 300px;
+    padding: 10px 20px;
+}
+
+.main-logo img {
+    width: 140px;
+}
+
+.header-main-content {
+    width: calc(100% - 300px);
+    padding: 10px 20px;
+}
+
+.header-main-content svg {
+    cursor: pointer;
+}
+
+.sidebar-content {
+    width: 300px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-right: 1px solid #DFDFDF;
+    padding: 20px 20px;
+    overflow-y: auto;
+    height: 100vh;
+}
+
+.sidebar-content ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.sidebar-content ul li a {
+    text-decoration: none;
+    color: var(--text-secondary-color);
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 40px;
+}
+
+.sidebar-content ul li a.active {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.sidebar-content ul li a.active svg path {
+    stroke: var(--white-color);
+}
+
+.sidebar-content ul li a svg {
+    width: 25px;
+    height: 25px;
+    /* stroke: var(--text-secondary-color); */
+}
+
+.main-content {
+    width: calc(100% - 300px);
+    padding: 20px 20px;
+    overflow-y: auto;
+    background: #f1f1f1;
+}
+
+.title-wrapper h4 {
+    margin: 0;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+.title-wrapper span {
+    font-size: 14px;
+    color: var(--text-secondary-color);
+}
+
+.widget-content {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 8px;
+    margin: 15px 0;
+    background-color: var(--white-color);
+    padding: 20px;
+    overflow: hidden;
+}
+
+.dashboard-cards-row .widget-content {
+    padding: 0;
+}
+
+.dashboard-cards {
+    padding: 15px;
+    position: relative;
+    overflow: hidden;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    /* background-color: var(--primary-color); */
+}
+
+.dashboard-cards h3 {
+    font-weight: 500;
+    color: var(--white-color);
+}
+
+.dashboard-cards h5 {
+    font-size: 30px;
+    font-weight: 400;
+    color: var(--white-color);
+}
+
+.dashboard-cards svg {
+    width: 135px;
+    height: 135px;
+    opacity: .3;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    fill: var(--white-color);
+}
+
+.patients-table {
+    margin: 0;
+}
+
+.breadcrumb {
+    padding: 10px 0;
+    margin: 0;
+}
+
+.breadcrumb li a {
+    text-decoration: none;
+    color: var(--text-secondary-color);
+}
+
+.breadcrumb li a.active {
+    color: var(--black-color);
+}
+
+.patients-table-box table tr th {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.patients-table-box table tr td {
+    vertical-align: middle;
+}
+
+.patients-table-box table tr td span {
+    margin: 0 15px;
+}
+
+.patients-table-box table tr td img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.patients-table-box table tr td a {
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 40px;
+}
+
+.disclamer-box p {
+    color: var(--text-secondary-color);
+    font-size: 14px;
+}
+
+.event-delete-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 400px;
+    width: 90%;
+    background-color: var(--white-color);
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    z-index: 5;
+}
+
+.event-delete-modal h4 {
+    font-weight: 400;
+}
+
+.modal-dropshadow {
+    content: "";
+    background-color: #00000071;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.rbc-event,
+.rbc-day-slot .rbc-background-event {
+    font-size: 14px;
+}
+
+.notification-box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 10px;
+    border-top: 1px solid rgba(211, 211, 211, 0.597);
+}
+
+.notification-box:first-child {
+    padding-top: 0;
+    border-top: none;
+}
+
+.notification-box:last-child {
+    padding-bottom: 0;
+}
+
+.notification-box h6 {
+    margin: 0;
+    font-weight: 400;
+}
+
+.notification-box svg {
+    width: 30px;
+    height: 30px;
+    fill: var(--text-secondary-color);
+}
+
+.filter-search {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    min-width: auto;
+    border: 1px solid lightgray;
+    border-radius: 30px;
+    overflow: hidden;
+    padding-right: 15px;
+}
+
+.filter-search input {
+    border-color: transparent;
+    padding: 6px 0 6px 15px;
+}
+
+.file-icon svg {
+    width: 30px;
+    height: 30px;
+    color: #df0909;
+}
+
+.uploadFormLabel {
+    margin-top: 20px;
+    border: 1px dashed var(--primary-color);
+    width: 100%;
+    height: 289px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    border-radius: 15px;
+    overflow-y: auto;
+}
+
+.uploadFormLabel svg {
+    width: 30px;
+    height: 30px;
+    color: var(--primary-color);
+    margin-right: 8px;
+}
+
+.file-previewr {
+    width: 100%;
+    height: 100%;
+}
+
+.file-previewr img {
+    width: 100%;
+}
+
+.faqs-box .accordion-header svg {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    ;
+}
+
+.faqs-box .accordion-header .accordion-button:not(.collapsed) {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.faqs-box .accordion-header .accordion-button:not(.collapsed) svg {
+    stroke: var(--white-color);
+}
+
+.faqs-box .accordion-header button {
+    padding: 10px;
+}
+
+.faqs-box .accordion-header button:focus {
+    box-shadow: none;
+}
+
+.faqs-box .accordion-body {
+    font-size: 15px;
+}
+
+.faqs-box .accordion-button:not(.collapsed):after {
+    filter: invert(1);
+}
+
+.patients-detail-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.accountImage {
+    border: 2px dashed lightgrey;
+    width: 180px;
+    height: 180px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.accountImage svg {
+    width: 60px;
+    height: 60px;
+    fill: lightgrey;
+}
+
+/* CHAT CSS START */
+.chatbox {
+    height: 100%;
+    display: flex;
+    background-color: #FFF;
+ }
+
+.chat-list {
+    width: 350px;
+    border-right: 1px solid #DFDFDF;
+}
+
+.chat-inbox {
+    width: calc(100% - 350px);
+
+}
+
+.chat-list-header {
+    padding: 10px;
+    border-bottom: 1px solid #DFDFDF;
+}
+
+.chat-list-header h4 {
+    padding: 8px;
+    margin-bottom: 0;
+}
+
+.chat-list ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    height: 100vh;
+    overflow-y: auto;
+    padding-bottom: 25px;
+}
+
+.chat-list ul li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #DFDFDF;
+    text-decoration: none;
+}
+
+.chat-list ul li:last-child a {
+    border-bottom: none;
+}
+
+.chat-list ul li a img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.chat-list ul li a h6 {
+    font-size: medium;
+    margin-bottom: 0;
+    color: var(--black-color);
+}
+
+.chat-list ul li a span {
+    display: block;
+    font-size: small;
+    color: var(--black-color);
+    opacity: .6;
+}
+
+.chat-inbox-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid #DFDFDF;
+}
+
+.chat-inbox-header h6 {
+    margin-bottom: 0;
+}
+
+.chat-inbox-header img {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+}
+
+.chat-inbox .chat-body {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+    padding: 16px;
+    background-color: green;
+}
+
+.chat-footer {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    border-top: 1px solid #DFDFDF;
+}
+.chat-footer .send-message {
+    background-color: var(--primary-color);
+    height: auto;
+    width: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+/* CHAT CSS End */
+
+@media(max-width:991px) {
+    .sidebar-content ul li span {
+        display: none;
+    }
+
+    .sidebar-content {
+        width: 65px;
+        padding: 20px 10px;
+    }
+
+    .main-content {
+        width: calc(100% - 65px);
+    }
+
+    .table-responsive {
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+    }
+
+    table {
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+    }
+
+    .rbc-calendar {
+        min-width: max-content;
+    }
+
+    .rbc-toolbar-label {
+        margin: 10px 0;
+    }
+}
