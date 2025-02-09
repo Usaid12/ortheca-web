@@ -1,21 +1,21 @@
-import React from 'react'
-import Header from '../layout/Header'
-import Sidebar from '../layout/Sidebar'
+import React from "react";
+import Header from "../layout/Header";
+import ClientSidebar from "./client-sidebar";
 
-const Layout = ({ children, style }) => {
-    return (
-        <>
-            <Header type='client' />
-            <main>
-                <div className='sidebar-content'>
-                    <Sidebar />
-                </div>
-                <div className='main-content' style={style}>
-                    {children}
-                </div>
-            </main >
-        </>
-    )
-}
+const PatientLayout = ({ children, style }) => {
+  return (
+    <>
+      <Header type="client" />
+      <main>
+        <div className="client-sidebar-content">
+          <ClientSidebar />
+        </div>
+        <div className="main-content" style={style}>
+          {children}
+        </div>
+      </main>
+    </>
+  );
+};
 
-export default Layout
+export default PatientLayout;
