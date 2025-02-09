@@ -3,9 +3,7 @@ import { NavLink } from "react-router-dom";
 import { IoCalendarNumberOutline } from "react-icons/io5";
 import { RxDashboard } from "react-icons/rx";
 import { MdOutlineNotificationsActive } from "react-icons/md";
-import { PiUserCirclePlus } from "react-icons/pi";
 import { FaRegUser } from "react-icons/fa";
-import { FaWpforms } from "react-icons/fa6";
 import { AiOutlineForm } from "react-icons/ai";
 import { MdInfoOutline } from "react-icons/md";
 import { LiaBriefcaseMedicalSolid } from "react-icons/lia";
@@ -21,7 +19,7 @@ const ClientSidebar = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/patient/">
+          <NavLink to="/patient/" end>
             <RxDashboard /> <span>Dashboard</span>
           </NavLink>
         </li>
@@ -36,7 +34,7 @@ const ClientSidebar = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/patient/notifications">
+          <NavLink to="/patient/notification">
             <MdOutlineNotificationsActive /> <span>Notifications</span>
           </NavLink>
         </li>

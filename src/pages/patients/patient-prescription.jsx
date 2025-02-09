@@ -1,17 +1,17 @@
 import React, { useState } from 'react'
-import Layout from '../../../components/layout/Layout'
-import { NavLink } from 'react-router-dom'
+// import { NavLink } from 'react-router-dom'
 import { CiSearch } from "react-icons/ci";
 import Modal from 'react-bootstrap/Modal';
+import PatientLayout from '../../components/layout/Client';
 
-const Prescription = () => {
+const PrescriptionView = () => {
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
     return (
-        <Layout>
+        <PatientLayout>
             <div className='row'>
                 <div className='col-lg-12'>
                     <div className='title-wrapper'>
@@ -26,7 +26,6 @@ const Prescription = () => {
                                     <input type="text" placeholder='Search...' />
                                     <CiSearch />
                                 </div>
-                                <NavLink to='/prescription/create-prescription' className='theme-btn btn btn-primary'>Create Prescription</NavLink>
                             </div>
                             <table className='table patients-table'>
                                 <thead>
@@ -88,8 +87,8 @@ const Prescription = () => {
                     <button className='btn btn-danger  btn-sm' onClick={handleClose}>Close</button>
                 </Modal.Footer>
             </Modal>
-        </Layout>
+        </PatientLayout>
     )
 }
 
-export default Prescription
+export default PrescriptionView

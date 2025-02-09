@@ -20,9 +20,14 @@ import Prescription from "./pages/doctor/prescription/Prescription";
 import Chat from "./pages/doctor/chats/Chat";
 import PatientDashboard from "./pages/patients/patient-dashboard";
 import PatientCalendar from "./pages/patients/patient-calender";
+<<<<<<< Updated upstream
 import PatientNews from "./pages/patients/patient-news";
 import PatientProfile from "./pages/patients/patient-profile";
 import PatientHelp from "./pages/patients/patient-help";
+=======
+import PatientNotifications from "./pages/patients/patient-notification";
+import PrescriptionView from "./pages/patients/patient-prescription";
+>>>>>>> Stashed changes
 
 function App() {
   return (
@@ -58,9 +63,20 @@ function App() {
           <Route path="/help" element={<Help />}></Route>
           <Route path="/patient/" element={<PatientDashboard />}></Route>
           <Route path="/patient/calender" element={<PatientCalendar />}></Route>
+<<<<<<< Updated upstream
           <Route path="/patient/news" element={<PatientNews />}></Route>
           <Route path="/patient/profile" element={<PatientProfile />}></Route>
           <Route path="/patient/help" element={<PatientHelp />}></Route>
+=======
+          <Route
+            path="/patient/notification"
+            element={<PatientNotifications />}
+          ></Route>
+          <Route
+            path="/patient/prescription"
+            element={<PrescriptionView />}
+          ></Route>
+>>>>>>> Stashed changes
         </Routes>
       </BrowserRouter>
     </>
