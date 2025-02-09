@@ -33,6 +33,10 @@ body {
     background-color: var(--primary-color);
 }
 
+.btn-secondary {
+    background-color: var(--secondary-color);
+}
+
 .btn-primary,
 .btn-danger {
     font-size: 14px;
@@ -156,7 +160,22 @@ main {
     height: 100vh;
 }
 
+.client-sidebar-content {
+    width: 300px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-right: 1px solid #DFDFDF;
+    padding: 20px 20px;
+    overflow-y: auto;
+    height: 100vh;
+}
+
 .sidebar-content ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.client-sidebar-content ul {
     padding: 0;
     margin: 0;
     list-style-type: none;
@@ -173,8 +192,24 @@ main {
     border-radius: 40px;
 }
 
+.client-sidebar-content ul li a {
+    text-decoration: none;
+    color: var(--text-secondary-color);
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 40px;
+}
+
 .sidebar-content ul li a.active {
     background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.client-sidebar-content ul li a.active {
+    background-color: var(--secondary-color);
     color: var(--white-color);
 }
 
@@ -182,7 +217,17 @@ main {
     stroke: var(--white-color);
 }
 
+.client-sidebar-content ul li a.active svg path {
+    stroke: var(--white-color);
+}
+
 .sidebar-content ul li a svg {
+    width: 25px;
+    height: 25px;
+    /* stroke: var(--text-secondary-color); */
+}
+
+.client-sidebar-content ul li a svg {
     width: 25px;
     height: 25px;
     /* stroke: var(--text-secondary-color); */
