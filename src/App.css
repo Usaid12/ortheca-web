@@ -33,6 +33,10 @@ body {
     background-color: var(--primary-color);
 }
 
+.btn-secondary {
+    background-color: var(--secondary-color);
+}
+
 .btn-primary,
 .btn-danger {
     font-size: 14px;
