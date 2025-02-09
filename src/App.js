@@ -18,6 +18,8 @@ import CreatePrescription from "./pages/doctor/prescription/CreatePrescription";
 import PatientsPrescription from "./pages/doctor/patients/PatientsPrescription";
 import Prescription from "./pages/doctor/prescription/Prescription";
 import Chat from "./pages/doctor/chats/Chat";
+import PatientDashboard from "./pages/patients/patient-dashboard";
+import PatientCalendar from "./pages/patients/patient-calender";
 
 function App() {
   return (
@@ -51,6 +53,8 @@ function App() {
           <Route path="/forms" element={<Forms />}></Route>
           <Route path="/chat" element={<Chat />}></Route>
           <Route path="/help" element={<Help />}></Route>
+          <Route path="/patient/" element={<PatientDashboard />}></Route>
+          <Route path="/patient/calender" element={<PatientCalendar />}></Route>
         </Routes>
       </BrowserRouter>
     </>
