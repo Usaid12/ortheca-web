@@ -6,10 +6,10 @@ import PatientLayout from '../../components/layout/Client';
 const PatientNotifications = () => {
     return (
         <PatientLayout>
-            <div className='row'>
+            <div className='row '>
                 <div className='col-lg-12'>
                     <div className='title-wrapper'>
-                        <h4>Notifications</h4>
+                        <h4 className='text-red-400'>Notifications</h4>
                         <p>Here all of your notifications - highlighted are the ones that have not been read</p>
                     </div>
                 </div>
