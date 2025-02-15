@@ -14,7 +14,7 @@ const ClientSidebar = () => {
     <>
       <ul>
         <li>
-          <NavLink to="/patient/appointments">
+          <NavLink to="/patient/appointment">
             <RxDashboard /> <span>Appointments</span>
           </NavLink>
         </li>

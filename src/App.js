@@ -25,6 +25,9 @@ import PatientProfile from "./pages/patients/patient-profile";
 import PatientHelp from "./pages/patients/patient-help";
 import PatientNotifications from "./pages/patients/patient-notification";
 import PrescriptionView from "./pages/patients/patient-prescription";
+import PatientAppointment from "./pages/patients/patient-appointment";
+import PatientSignup from "./pages/patients/patient-signup";
+import PatientSignin from "./pages/patients/patient-signin";
 
 function App() {
   return (
@@ -71,6 +74,12 @@ function App() {
             path="/patient/prescription"
             element={<PrescriptionView />}
           ></Route>
+          <Route
+            path="/patient/appointment"
+            element={<PatientAppointment />}
+          ></Route>
+          <Route path="/patient/signin" element={<PatientSignin />}></Route>
+          <Route path="/patient/signup" element={<PatientSignup />}></Route>
         </Routes>
       </BrowserRouter>
     </>
