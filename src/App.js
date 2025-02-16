@@ -28,6 +28,8 @@ import PrescriptionView from "./pages/patients/patient-prescription";
 import PatientAppointment from "./pages/patients/patient-appointment";
 import PatientSignup from "./pages/patients/patient-signup";
 import PatientSignin from "./pages/patients/patient-signin";
+import DoctorSignup from "./pages/doctor/doctor-signup";
+import DoctorSignin from "./pages/doctor/doctor-signin";
 
 function App() {
   return (
@@ -52,6 +54,8 @@ function App() {
             element={<CreatePrescription />}
           ></Route>
           <Route path="/prescription" element={<Prescription />}></Route>
+          <Route path="/signup" element={<DoctorSignup />}></Route>
+          <Route path="/signin" element={<DoctorSignin />}></Route>
 
           <Route path="/calendar" element={<Calendars />}></Route>
           <Route path="/notifications" element={<Notifications />}></Route>
