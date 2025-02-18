@@ -23,7 +23,7 @@ const PatientAppointment = () => {
             information. This will send an email with a pre-consultation form
             they must complete to book an appointment.
           </p>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label className="block text-gray-700">Consultation</label>
               <select
@@ -102,7 +102,7 @@ const PatientAppointment = () => {
               className="border h-[200px] p-2 rounded w-full"
             ></textarea>
           </div>
-          <button className="bg-pink-500 text-white p-1  h-[60px] rounded w-[35%] mt-4 hover:bg-pink-600">
+          <button className="bg-pink-500 text-white p-1  h-[60px] rounded lg:w-[35%] w-full mt-4 hover:bg-pink-600">
             Submit Appointment
           </button>
         </div>

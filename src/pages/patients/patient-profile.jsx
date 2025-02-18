@@ -11,7 +11,7 @@ const PatientProfile = () => {
             <h4>Account</h4>
           </div>
         </div>
-        <div className="col-lg-12">
+        <div className="col-lg-12 pb-[200px] h-[100vh] overflow-auto">
           <div className="widget-content">
             <form action="">
               <div className="row">
