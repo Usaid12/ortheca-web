@@ -236,7 +236,6 @@ main {
 .main-content {
     width: calc(100% - 300px);
     padding: 20px 20px;
-    overflow-y: auto;
     background: #f1f1f1;
 }
 
@@ -629,15 +628,15 @@ main {
 
 /* CHAT CSS End */
 
-@media(max-width:991px) {
-    .sidebar-content ul li span {
+ @media(max-width:991px) {
+    /* .sidebar-content ul li span {
         display: none;
     }
 
     .sidebar-content {
-        width: 65px;
+        width: 20%;
         padding: 20px 10px;
-    }
+    } */
 
     .main-content {
         width: calc(100% - 65px);
@@ -660,4 +659,4 @@ main {
     .rbc-toolbar-label {
         margin: 10px 0;
     }
-}
+} 

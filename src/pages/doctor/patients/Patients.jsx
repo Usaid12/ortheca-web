@@ -5,8 +5,8 @@ import { CiSearch } from 'react-icons/ci'
 
 const Patients = () => {
     return (
-        <Layout>
-            <div className='row'>
+        <Layout >
+            <div className='row min-w-fit min-h-fit'>
                 <div className='col-lg-12'>
                     <div className='title-wrapper'>
                         <h4>Patients</h4>
@@ -14,15 +14,15 @@ const Patients = () => {
                 </div>
                 <div className='col-lg-8'>
                     <div className='widget-content'>
-                        <div className='patients-table-box'>
+                        <div className='patients-table-box overflow-x-auto'>
                             <div className='mb-3 d-flex align-items-center justify-content-end gap-3'>
                                 <div className='filter-search'>
                                     <input type="text" placeholder='Search...' />
                                     <CiSearch />
                                 </div>
-                                <NavLink to='/patients/add-patients' className='theme-btn btn btn-primary ms-auto'>Add Patient</NavLink>
+                                <NavLink to='/patients/add-patients' className='theme-btn btn btn-primary ms-auto truncate'>Add Patient</NavLink>
                             </div>
-                            <table className='table patients-table'>
+                            <table className='table patients-table '>
                                 <thead>
                                     <tr>
                                         <th>Name</th>
