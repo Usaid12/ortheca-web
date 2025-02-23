@@ -7,9 +7,10 @@ const Layout = ({ children, style }) => {
   return (
     <>
       <Header type="doctor" />
-      <main className="relative flex">
+      <main className="relative flex ">
         <button
-          className="md:hidden p-2 text-gray-600 fixed top-2 right-4 z-50 bg-white shadow-lg rounded-full"
+          className="md:hidden p-2 absolute text-gray-600 top-[-40px] right-0 z-50
+ "
           onClick={() => setIsSidebarOpen(!isSidebarOpen)}
         >
           <FaBars size={24} />
