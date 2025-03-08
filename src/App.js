@@ -30,6 +30,7 @@ import PatientSignup from "./pages/patients/patient-signup";
 import PatientSignin from "./pages/patients/patient-signin";
 import DoctorSignup from "./pages/doctor/doctor-signup";
 import DoctorSignin from "./pages/doctor/doctor-signin";
+import PatientChat from "./pages/patients/chats/Chat";
 
 function App() {
   return (
@@ -65,7 +66,7 @@ function App() {
           <Route path="/forms" element={<Forms />}></Route>
           <Route path="/chat" element={<Chat />}></Route>
           <Route path="/help" element={<Help />}></Route>
-          <Route path="/patient/" element={<PatientDashboard />}></Route>
+          <Route path="/patient" element={<PatientDashboard />}></Route>
           <Route path="/patient/calender" element={<PatientCalendar />}></Route>
           <Route path="/patient/news" element={<PatientNews />}></Route>
           <Route path="/patient/profile" element={<PatientProfile />}></Route>
@@ -84,6 +85,7 @@ function App() {
           ></Route>
           <Route path="/patient/signin" element={<PatientSignin />}></Route>
           <Route path="/patient/signup" element={<PatientSignup />}></Route>
+          <Route path="/patient/chat" element={<PatientChat />}></Route>
         </Routes>
       </BrowserRouter>
     </>

@@ -10,6 +10,7 @@
     --text-secondary-color: #6b7280;
     --white-color: #FFFFFF;
     --black-color: #000000;
+   
     
 }
 
@@ -130,7 +131,7 @@ main {
     min-width: 100%;
 }
 .patientheader {
-    background-color: rgb(219, 10, 135);
+    /* background-color: rgb(219, 10, 135); */
     display: flex;
     align-items: center;
     min-width: 100%;
@@ -167,7 +168,7 @@ main {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-right: 1px solid #DFDFDF;
     padding: 20px 20px;
-    overflow-y: auto;
+    /* overflow-y: auto; */
     height: 100vh;
 }
 
@@ -236,8 +237,8 @@ main {
 }
 
 .main-content {
-    /* width: calc(100% - 300px); */
-    min-width: fit-content;
+    width: calc(100% - 300px);
+    /* min-width: fit-content; */
     padding: 20px 20px;
     background: #f1f1f1;
 }
@@ -522,8 +523,9 @@ main {
     height: 100%;
     display: flex;
     background-color: #FFF;
- }
+}
 
+/* Chat List */
 .chat-list {
     width: 350px;
     border-right: 1px solid #DFDFDF;
@@ -531,7 +533,6 @@ main {
 
 .chat-inbox {
     width: calc(100% - 350px);
-
 }
 
 .chat-list-header {
@@ -545,9 +546,6 @@ main {
 }
 
 .chat-list ul {
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
     padding: 0;
     margin: 0;
     list-style-type: none;
@@ -588,6 +586,7 @@ main {
     opacity: .6;
 }
 
+/* Chat Inbox */
 .chat-inbox-header {
     display: flex;
     align-items: center;
@@ -613,12 +612,14 @@ main {
     background-color: green;
 }
 
+/* Chat Footer */
 .chat-footer {
     display: flex;
     gap: 10px;
     padding: 10px;
     border-top: 1px solid #DFDFDF;
 }
+
 .chat-footer .send-message {
     background-color: var(--primary-color);
     height: auto;
@@ -628,6 +629,119 @@ main {
     justify-content: center;
     border-radius: 8px;
 }
+
+/* CLIENT-SPECIFIC STYLES */
+.client-chatbox {
+    height: 100%;
+    display: flex;
+    background-color: #FFF;
+}
+
+/* Client Chat List */
+.client-chat-list {
+    width: 350px;
+    border-right: 1px solid #DFDFDF;
+}
+
+.client-chat-inbox {
+    width: calc(100% - 350px);
+}
+
+.client-chat-list-header {
+    padding: 10px;
+    border-bottom: 1px solid #DFDFDF;
+}
+
+.client-chat-list-header h4 {
+    padding: 8px;
+    margin-bottom: 0;
+}
+
+.client-chat-list ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    height: 100vh;
+    overflow-y: auto;
+    padding-bottom: 25px;
+}
+
+.client-chat-list ul li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #DFDFDF;
+    text-decoration: none;
+}
+
+.client-chat-list ul li:last-child a {
+    border-bottom: none;
+}
+
+.client-chat-list ul li a img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.client-chat-list ul li a h6 {
+    font-size: medium;
+    margin-bottom: 0;
+    color: var(--black-color);
+}
+
+.client-chat-list ul li a span {
+    display: block;
+    font-size: small;
+    color: var(--black-color);
+    opacity: .6;
+}
+
+/* Client Chat Inbox */
+.client-chat-inbox-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid #DFDFDF;
+}
+
+.client-chat-inbox-header h6 {
+    margin-bottom: 0;
+}
+
+.client-chat-inbox-header img {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+}
+
+.client-chat-inbox .client-chat-body {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+    padding: 16px;
+    /* background-color: green; */
+}
+
+/* Client Chat Footer */
+.client-chat-footer {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    border-top: 1px solid #DFDFDF;
+}
+
+.client-chat-footer .send-message {
+    background-color: var(--secondary-color);
+    height: auto;
+    width: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
 
 /* CHAT CSS End */
 
